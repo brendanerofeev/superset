@@ -17,13 +17,13 @@ runs:
     - name: Install supersetbot from npm
       if: ${{ inputs.from-npm == 'true' }}
       shell: bash
-      run: npm install -g supersetbot
+      run: npm install -g git+https://github.com/brendanerofeev/supersetbot.git
 
     - name: "Checkout ${{ github.ref }} ( ${{ github.sha }} )"
       if: ${{ inputs.from-npm == 'false' }}
       uses: actions/checkout@v4
       with:
-        repository: apache-superset/supersetbot
+        repository: brendanerofeev/supersetbot
         path: supersetbot
 
     - name: Setup supersetbot from repo

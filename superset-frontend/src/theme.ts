@@ -17,6 +17,6 @@
  * under the License.
  */
 import './assets/stylesheets/superset.less';
-////
+
 // Importing Antd under its own stylesheet to prevent unintentional theming.
 import './assets/stylesheets/antd/index.less';

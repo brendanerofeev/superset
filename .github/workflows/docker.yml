@@ -83,27 +83,8 @@ jobs:
           elif [ "${{ github.event_name }}" = "pull_request" ]; then
             PLATFORM_ARG="--platform linux/amd64"
           fi
-
-          docker buildx build \
-            --push \
-            -t subbiesupport/superset:latest \
-              -t subbiesupport/superset:93f3f8f \
-            --cache-from=type=registry,ref=apache/superset-cache:3.10-slim-bookworm \
-            --cache-to=type=registry,mode=max,ref=subbiesupport/superset-cache:3.10-slim-bookworm \
-            --target lean \
-            --build-arg PY_VER=3.10-slim-bookworm \
-            --platform linux/arm64,linux/amd64 \
-            --label sha=93f3f8fa33d1b43b959f710b829209a1d95e0466 \
-            --label target=lean \
-            --label build_trigger= \
-            --label base=3.10-slim-bookworm \
-            --label build_actor=*** \
-             \
-             \
-            .
-
-         # supersetbot docker \
-         #    --preset ${{ matrix.build_preset }} \
-         #    --context "$EVENT" \
-         #    --context-ref "$RELEASE" $FORCE_LATEST \
-         #    $PLATFORM_ARG
+          supersetbot docker \
+            --preset ${{ matrix.build_preset }} \
+            --context "$EVENT" \
+            --context-ref "$RELEASE" $FORCE_LATEST \
+            $PLATFORM_ARG

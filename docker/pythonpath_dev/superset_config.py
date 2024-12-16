@@ -71,7 +71,6 @@ EXAMPLES_DB = os.getenv("EXAMPLES_DB")
 APP_CONFIG = {}
 APP_CONFIG["DEBUG"] = False
 
-SECRET_KEY = 'dVPHqvXcrj2dVlMcE3J+OTz6AvJ5KcWt2LtSn7AZ5LCoYkLvsMxtr++o'
 
 
 # The SQLAlchemy connection string.

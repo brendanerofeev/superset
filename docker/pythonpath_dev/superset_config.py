@@ -8,8 +8,8 @@ ROW_LIMIT = 5000
 # Alternatively you can set it with `SUPERSET_SECRET_KEY` environment variable.
 # You MUST set this for production environments or the server will not refuse
 # to start and you will see an error in the logs accordingly.
-# SECRET_KEY = '9HugbmFrCPGm+Rh6sNHopn4b00dTcrQjb3WciqCIQt8cgMOPtkHODi8l'
-SECRET_KEY = 'QpH3S9WZLS+WbguIl0xiGFJNGqJ5qFIEti+NOv33IKjqLwL9mCh/ttYm'
+SECRET_KEY = '9HugbmFrCPGm+Rh6sNHopn4b00dTcrQjb3WciqCIQt8cgMOPtkHODi8l'
+# SECRET_KEY = 'QpH3S9WZLS+WbguIl0xiGFJNGqJ5qFIEti+NOv33IKjqLwL9mCh/ttYm'
 # The SQLAlchemy connection string to your database backend
 # This connection defines the path to the database that stores your
 # superset metadata (slices, connections, tables, dashboards, ...).

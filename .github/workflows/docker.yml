@@ -89,6 +89,7 @@ jobs:
           export SUPERSET_SECRET_KEY="QpH3S9WZLS+WbguIl0xiGFJNGqJ5qFIEti+NOv33IKjqLwL9mCh/ttYm"
           echo "Using SUPERSET_SECRET_KEY=${SUPERSET_SECRET_KEY}"
           pwd
+          ls
 
           # Run the build
           supersetbot docker \

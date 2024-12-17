@@ -52,7 +52,7 @@ jobs:
           token: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Set up QEMU
-        if: steps.check.outputs.python || steps.check.outputs.frontend || steps.check.outputs.docker
+        if: steps.check.outputs.python || steps.check.outputs.frontend || steps.check.outputs.docker || true
         uses: docker/setup-qemu-action@v3
 
       - name: Set up Docker Buildx

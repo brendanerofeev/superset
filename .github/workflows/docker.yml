@@ -37,7 +37,6 @@ jobs:
     env:
       DOCKERHUB_USER: ${{ secrets.DOCKERHUB_USER }}
       DOCKERHUB_TOKEN: ${{ secrets.DOCKERHUB_TOKEN }}
-      SUPERSET_SECRET_KEY: "QpH3S9WZLS+WbguIl0xiGFJNGqJ5qFIEti+NOv33IKjqLwL9mCh/ttYm"  # Hardcoded here
 
     steps:
       - name: "Checkout ${{ github.ref }} ( ${{ github.sha }} )"
@@ -76,7 +75,6 @@ jobs:
         shell: bash
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          SUPERSET_SECRET_KEY: "QpH3S9WZLS+WbguIl0xiGFJNGqJ5qFIEti+NOv33IKjqLwL9mCh/ttYm"  # Hardcoded again for this step
         run: |
           # Single platform builds in pull_request context to speed things up
           if [ "${{ github.event_name }}" = "push" ]; then
@@ -84,12 +82,6 @@ jobs:
           elif [ "${{ github.event_name }}" = "pull_request" ]; then
             PLATFORM_ARG="--platform linux/amd64"
           fi
-
-          # Export the SECRET_KEY to the build context
-          export SUPERSET_SECRET_KEY="QpH3S9WZLS+WbguIl0xiGFJNGqJ5qFIEti+NOv33IKjqLwL9mCh/ttYm"
-          echo "Using SUPERSET_SECRET_KEY=${SUPERSET_SECRET_KEY}"
-          pwd
-          ls
 
           # Run the build
           supersetbot docker \

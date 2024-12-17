@@ -457,6 +457,9 @@ class SupersetAppInitializer:  # pylint: disable=too-many-public-methods
             logger.error("Refusing to start due to insecure SECRET_KEY")
             sys.exit(1)
 
+        logger.warning(self.config["SECRET_KEY"])
+        logger.warning(CHANGE_ME_SECRET_KEY)
+
     def configure_session(self) -> None:
         if self.config["SESSION_SERVER_SIDE"]:
             Session(self.superset_app)

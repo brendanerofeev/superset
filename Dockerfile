@@ -102,7 +102,8 @@ ENV LANG=C.UTF-8 \
     FLASK_APP="superset.app:create_app()" \
     PYTHONPATH="/app/pythonpath" \
     SUPERSET_HOME="/app/superset_home" \
-    SUPERSET_PORT=8088
+    SUPERSET_PORT=8088 \
+    SUPERSET_CONFIG_PATH="/app/superset_config.py"
 
 # Set up necessary directories and user
 RUN --mount=type=bind,source=./docker,target=/docker \
@@ -129,6 +130,7 @@ COPY --chown=superset:superset pyproject.toml setup.py MANIFEST.in README.md ./
 COPY --chown=superset:superset superset-frontend/package.json superset-frontend/
 COPY --chown=superset:superset requirements/base.txt requirements/
 COPY --chown=superset:superset scripts/check-env.py scripts/
+COPY --chown=superset:superset docker/pythonpath_dev/superset_config.py /app/
 
 # Install Python dependencies using docker/pip-install.sh
 RUN --mount=type=bind,source=./docker,target=/docker \

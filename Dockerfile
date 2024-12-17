@@ -131,6 +131,7 @@ COPY --chown=superset:superset pyproject.toml setup.py MANIFEST.in README.md ./
 COPY --chown=superset:superset superset-frontend/package.json superset-frontend/
 COPY --chown=superset:superset requirements/base.txt requirements/
 COPY --chown=superset:superset scripts/check-env.py scripts/
+COPY --chown=superset:superset docker/pythonpath_dev/superset_config.py /app/
 
 # Install Python dependencies using docker/pip-install.sh
 RUN --mount=type=bind,source=./docker,target=/docker \

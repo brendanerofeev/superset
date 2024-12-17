@@ -104,6 +104,8 @@ ENV LANG=C.UTF-8 \
     SUPERSET_HOME="/app/superset_home" \
     SUPERSET_PORT=8088
 
+RUN pip install flask_cors
+
 # Set up necessary directories and user
 RUN --mount=type=bind,source=./docker,target=/docker \
     mkdir -p ${PYTHONPATH} \

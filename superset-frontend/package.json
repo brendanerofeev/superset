@@ -117,6 +117,10 @@
     "@superset-ui/plugin-chart-table": "file:./plugins/plugin-chart-table",
     "@superset-ui/plugin-chart-word-cloud": "file:./plugins/plugin-chart-word-cloud",
     "@superset-ui/switchboard": "file:./packages/superset-ui-switchboard",
+    "@superset-ui/superset-plugin-chart-page1": "file:./plugins/superset-plugin-chart-page1",
+    "@superset-ui/superset-plugin-chart-circle-percent": "file:./plugins/superset-plugin-chart-circle-percent",
+    "@superset-ui/superset-plugin-chart-box-plot": "file:./plugins/superset-plugin-chart-box-plot",
+
     "@types/d3-format": "^3.0.1",
     "@types/d3-time-format": "^4.0.3",
     "@visx/axis": "^3.8.0",

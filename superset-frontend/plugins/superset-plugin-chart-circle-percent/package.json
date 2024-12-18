@@ -1,5 +1,5 @@
 {
-  "name": "superset-plugin-chart-circle-percent",
+  "name": "@superset-ui/superset-plugin-chart-circle-percent",
   "version": "0.1.0",
   "description": "Superset Plugin Chart Liquid",
   "sideEffects": false,
@@ -16,15 +16,14 @@
   "module": "esm/index.js",
   "main": "lib/index.js",
   "dependencies": {
-    "@ant-design/plots": "^2.0.0",
     "@mui/docs": "^6.1.8",
     "@mui/x-charts": "^7.22.3",
     "ag-charts-enterprise": "^10.3.3",
-    "ag-charts-react": "^10.3.3"
+    "ag-charts-react": "^10.3.3",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
   },
   "peerDependencies": {
-    "@emotion/react": "11.13.5",
-    "@emotion/styled": "11.13.5",
     "@superset-ui/chart-controls": "*",
     "@superset-ui/core": "*"
   },

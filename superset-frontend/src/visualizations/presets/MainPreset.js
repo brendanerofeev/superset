@@ -87,6 +87,10 @@ import { PivotTableChartPlugin as PivotTableChartPluginV2 } from '@superset-ui/p
 import { HandlebarsChartPlugin } from '@superset-ui/plugin-chart-handlebars';
 import { FilterPlugins } from 'src/constants';
 import TimeTableChartPlugin from '../TimeTable';
+import { SupersetPluginCharCirclePercent } from '@superset-ui/superset-plugin-chart-circle-percent';
+import { SupersetPluginCharBoxPlot } from '@superset-ui/superset-plugin-chart-box-plot';
+import { SupersetPluginChartPage1 } from '@superset-ui/superset-plugin-chart-page1';
+
 
 export default class MainPreset extends Preset {
   constructor() {
@@ -94,10 +98,10 @@ export default class MainPreset extends Preset {
       FeatureFlag.ChartPluginsExperimental,
     )
       ? [
-          new BigNumberPeriodOverPeriodChartPlugin().configure({
-            key: VizType.BigNumberPeriodOverPeriod,
-          }),
-        ]
+        new BigNumberPeriodOverPeriodChartPlugin().configure({
+          key: VizType.BigNumberPeriodOverPeriod,
+        }),
+      ]
       : [];
 
     super({
@@ -147,6 +151,10 @@ export default class MainPreset extends Preset {
         new TimeTableChartPlugin().configure({ key: VizType.TimeTable }),
         new WordCloudChartPlugin().configure({ key: VizType.WordCloud }),
         new WorldMapChartPlugin().configure({ key: VizType.WorldMap }),
+        new SupersetPluginCharCirclePercent().configure({ key: 'circle_percent' }),
+        new SupersetPluginChartPage1().configure({ key: 'page1' }),
+        new SupersetPluginCharBoxPlot().configure({ key: 'box_plot' }),
+
         new EchartsAreaChartPlugin().configure({
           key: VizType.Area,
         }),

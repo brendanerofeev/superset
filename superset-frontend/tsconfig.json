@@ -24,7 +24,16 @@
       ],
       "@superset-ui/plugin-chart-*": ["./plugins/plugin-chart-*/src"],
       "@superset-ui/preset-chart-*": ["./plugins/preset-chart-*/src"],
-      "@superset-ui/switchboard": ["./packages/superset-ui-switchboard/src"]
+      "@superset-ui/switchboard": ["./packages/superset-ui-switchboard/src"],
+      "@superset-ui/superset-plugin-chart-circle-percent":[
+        "./plugins/superset-plugin-chart-circle-percent/src"
+      ],
+      "@superset-ui/superset-plugin-chart-box-plot":[
+        "./plugins/superset-plugin-chart-box-plot/src"
+      ],
+      "@superset-ui/superset-plugin-chart-page1":[
+        "./plugins/superset-plugin-chart-page1/src"
+      ]
     },
     "types": [
       "@emotion/react/types/css-prop",
@@ -50,7 +59,6 @@
     "forceConsistentCasingInFileNames": true,
 
     /* Backwards Compatibility */
-    "suppressImplicitAnyIndexErrors": true,
 
     /* Language and Environment */
     "target": "esnext",

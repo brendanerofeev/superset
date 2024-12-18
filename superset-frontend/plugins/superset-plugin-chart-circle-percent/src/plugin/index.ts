@@ -22,7 +22,7 @@ import controlPanel from './controlPanel';
 import transformProps from './transformProps';
 import thumbnail from '../images/thumbnail.png';
 
-export default class SupersetPluginCharBoxPlot extends ChartPlugin {
+export default class SupersetPluginCharCirclePercent extends ChartPlugin {
   /**
    * The constructor is used to pass relevant metadata and callbacks that get
    * registered in respective registries that are used throughout the library
@@ -36,14 +36,14 @@ export default class SupersetPluginCharBoxPlot extends ChartPlugin {
   constructor() {
     const metadata = new ChartMetadata({
       description: 'Superset Plugin Chart Liquid',
-      name: t('Box Plot'),
+      name: t('Circle Percent'),
       thumbnail,
     });
 
     super({
       buildQuery,
       controlPanel,
-      loadChart: () => import('../BoxPlot'),
+      loadChart: () => import('../CirclePercent'),
       metadata,
       transformProps,
     });

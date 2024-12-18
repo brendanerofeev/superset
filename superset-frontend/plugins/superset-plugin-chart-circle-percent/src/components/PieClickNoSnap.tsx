@@ -26,11 +26,11 @@ export default function CircularPercentageChart({
         bgcolor: 'background.paper',
       }}
     >
-      <Typography variant="h6" color="black" textAlign={'center'} fontFamily={'bold'}
+      {/* <Typography variant="h6" color="black" textAlign={'center'} fontFamily={'bold'}
 
       >
         {label}
-      </Typography>
+      </Typography> */}
       <Box
         sx={{
           position: 'relative',
@@ -38,6 +38,11 @@ export default function CircularPercentageChart({
           width: 100,
 
           height: 'auto',
+          textAlign: 'center',
+          justifyContent: 'center',
+          alignContent: 'center',
+          alignItems: 'center',
+
         }}
       >
         <PieChart
@@ -46,15 +51,15 @@ export default function CircularPercentageChart({
               data,
               cx: 100, // Center x-coordinate
               cy: 75, // Center y-coordinate
-              innerRadius: 70,
-              outerRadius: 86,
+              innerRadius: 80,
+              outerRadius: 105,
             },
           ]}
           slotProps={{
             legend: { hidden: true },
           }}
           height={150}
-          width={200}
+          width={210}
           colors={['#00C49F', '#FF8042']}
         />
         <Box

@@ -4,13 +4,7 @@ import { AgCharts } from 'ag-charts-react';
 import "ag-charts-enterprise";
 
 
-// Define the props type explicitly
-type ChartExampleProps = {
-  data: any;
-  header: string;
-};
-
-const ChartExample = ({ data, header }: ChartExampleProps) => {
+const ChartExample = ({ data, header }: any) => {
   console.log("data in chart", data);
   const groupedData = data.reduce((acc: any, item: any) => {
     if (!acc[item.Summery]) {

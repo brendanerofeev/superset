@@ -1,5 +1,5 @@
 {
-  "name": "superset-plugin-chart-box-plot",
+  "name": "superset-plugin-chart-circle-percent",
   "version": "0.1.0",
   "description": "Superset Plugin Chart Liquid",
   "sideEffects": false,

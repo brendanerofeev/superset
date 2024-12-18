@@ -88,7 +88,7 @@ import { HandlebarsChartPlugin } from '@superset-ui/plugin-chart-handlebars';
 import { FilterPlugins } from 'src/constants';
 import TimeTableChartPlugin from '../TimeTable';
 import { SupersetPluginChartHelloWorld } from '/plugins/superset-plugin-chart-hello-world/src';
-import { SupersetPluginCharBoxPlot } from '/plugins/superset-plugin-chart-box-plot';
+import { SupersetPluginCharBoxPlot } from '/plugins/superset-plugin-chart-box-plot/src';
 
 
 export default class MainPreset extends Preset {

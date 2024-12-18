@@ -1,0 +1,39 @@
+{
+  "name": "superset-plugin-chart-box-plot",
+  "version": "0.1.0",
+  "description": "Superset Plugin Chart Liquid",
+  "sideEffects": false,
+  "files": [
+    "esm",
+    "lib"
+  ],
+  "scripts": {
+    "build": "npm run build-cjs && npm run build-esm && npm run ts-types",
+    "build-cjs": "babel src --extensions \".ts,.tsx,.js,.jsx\" --copy-files --out-dir lib",
+    "build-clean": "npm run clean && npm run build",
+    "build-esm": "BABEL_OUTPUT=esm babel src --extensions \".ts,.tsx,.js,.jsx\" --copy-files --out-dir esm",
+    "dev": "BABEL_OUTPUT=esm babel src --extensions \".ts,.tsx,.js,.jsx\" --watch --copy-files --out-dir esm",
+    "prebuild": "rimraf {lib,esm,tsconfig.tsbuildinfo}",
+    "postbuild": "npm run test",
+    "ts-types": "tsc --build",
+    "test": "jest"
+  },
+  "private": true,
+  "author": "My Name",
+  "license": "Apache-2.0",
+  "publishConfig": {
+    "access": "public"
+  },
+  "module": "esm/index.js",
+  "main": "lib/index.js",
+  "dependencies": {
+    "@mui/x-charts": "^7.23.2",
+    "ag-charts-enterprise": "^11.0.0",
+    "ag-charts-react": "^11.0.0",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0"
+  },
+  "devDependencies": {
+    "@types/react-dom": "^18.3.1"
+  }
+}

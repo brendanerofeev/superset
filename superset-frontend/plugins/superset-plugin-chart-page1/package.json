@@ -16,13 +16,12 @@
   "module": "esm/index.js",
   "main": "lib/index.js",
   "dependencies": {
-    "@mui/docs": "^6.1.8",
-    "@mui/x-charts": "^7.22.3"
+    "@mui/icons-material": "^6.2.1",
+    "@mui/x-charts": "^7.23.2",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0"
   },
-  "peerDependencies": {
-    "@emotion/react": "11.13.5",
-    "@emotion/styled": "11.13.5",
-    "@superset-ui/chart-controls": "*",
-    "@superset-ui/core": "*"
+  "devDependencies": {
+    "@types/react-dom": "^18.3.1"
   }
 }

@@ -38,7 +38,6 @@ import SankeyChartPlugin from '@superset-ui/legacy-plugin-chart-sankey';
 import TableChartPlugin from '@superset-ui/plugin-chart-table';
 import { WordCloudChartPlugin } from '@superset-ui/plugin-chart-word-cloud';
 import WorldMapChartPlugin from '@superset-ui/legacy-plugin-chart-world-map';
-
 import {
   AreaChartPlugin,
   BarChartPlugin,
@@ -88,9 +87,6 @@ import { PivotTableChartPlugin as PivotTableChartPluginV2 } from '@superset-ui/p
 import { HandlebarsChartPlugin } from '@superset-ui/plugin-chart-handlebars';
 import { FilterPlugins } from 'src/constants';
 import TimeTableChartPlugin from '../TimeTable';
-import SupersetPluginCharCirclePercent from 'plugins/superset-plugin-chart-circle-percent/src/plugin';
-import { SupersetPluginChartPage1 } from 'plugins/superset-plugin-chart-box-plot/src';
-import SupersetPluginCharBoxPlot from 'plugins/superset-plugin-chart-box-plot/src/plugin';
 
 export default class MainPreset extends Preset {
   constructor() {
@@ -98,19 +94,16 @@ export default class MainPreset extends Preset {
       FeatureFlag.ChartPluginsExperimental,
     )
       ? [
-        new BigNumberPeriodOverPeriodChartPlugin().configure({
-          key: VizType.BigNumberPeriodOverPeriod,
-        }),
-      ]
+          new BigNumberPeriodOverPeriodChartPlugin().configure({
+            key: VizType.BigNumberPeriodOverPeriod,
+          }),
+        ]
       : [];
 
     super({
       name: 'Legacy charts',
       presets: [new DeckGLChartPreset()],
       plugins: [
-        new SupersetPluginCharCirclePercent().configure({ key: 'circle_percent' }),
-        new SupersetPluginChartPage1().configure({ key: 'page1' }),
-        new SupersetPluginCharBoxPlot().configure({ key: 'box_plot' }),
         new AreaChartPlugin().configure({ key: VizType.LegacyArea }),
         new BarChartPlugin().configure({ key: VizType.LegacyBar }),
         new BigNumberChartPlugin().configure({ key: VizType.BigNumber }),

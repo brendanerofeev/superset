@@ -22,7 +22,7 @@ jobs:
     steps:
       - id: set_matrix
         run: |
-          MATRIX_CONFIG='["dev","lean"]'
+          MATRIX_CONFIG='["lean"]'
           echo "matrix_config=${MATRIX_CONFIG}" >> $GITHUB_OUTPUT
           echo $GITHUB_OUTPUT
 

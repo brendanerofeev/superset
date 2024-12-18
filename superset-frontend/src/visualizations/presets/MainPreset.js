@@ -87,6 +87,7 @@ import { PivotTableChartPlugin as PivotTableChartPluginV2 } from '@superset-ui/p
 import { HandlebarsChartPlugin } from '@superset-ui/plugin-chart-handlebars';
 import { FilterPlugins } from 'src/constants';
 import TimeTableChartPlugin from '../TimeTable';
+import { SupersetPluginChartHelloWorld } from 'plugins/superset-plugin-chart-hello-world';
 
 
 export default class MainPreset extends Preset {
@@ -188,6 +189,7 @@ export default class MainPreset extends Preset {
         new HandlebarsChartPlugin().configure({ key: VizType.Handlebars }),
         new EchartsBubbleChartPlugin().configure({ key: VizType.Bubble }),
         ...experimentalPlugins,
+        new SupersetPluginChartHelloWorld().configure({key:'ext-hello-world'}),
       ],
     });
   }

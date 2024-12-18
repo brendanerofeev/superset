@@ -1,0 +1,28 @@
+{
+  "name": "superset-plugin-chart-page1",
+  "version": "0.1.0",
+  "description": "Superset Plugin Chart Liquid",
+  "sideEffects": false,
+  "files": [
+    "esm",
+    "lib"
+  ],
+  "private": true,
+  "author": "My Name",
+  "license": "Apache-2.0",
+  "publishConfig": {
+    "access": "public"
+  },
+  "module": "esm/index.js",
+  "main": "lib/index.js",
+  "dependencies": {
+    "@mui/docs": "^6.1.8",
+    "@mui/x-charts": "^7.22.3"
+  },
+  "peerDependencies": {
+    "@emotion/react": "11.13.5",
+    "@emotion/styled": "11.13.5",
+    "@superset-ui/chart-controls": "*",
+    "@superset-ui/core": "*"
+  }
+}

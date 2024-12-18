@@ -16,7 +16,18 @@
  * specific language governing permissions and limitations
  * under the License.
  */
-import './assets/stylesheets/superset.less';
+import { SupersetPluginChartLiquid } from '../src';
 
-/// Importing Antd under its own stylesheet to prevent unintentional theming.
-import './assets/stylesheets/antd/index.less';
+/**
+ * The example tests in this file act as a starting point, and
+ * we encourage you to build more. These tests check that the
+ * plugin loads properly, and focus on `transformProps`
+ * to ake sure that data, controls, and props are all
+ * treated correctly (e.g. formData from plugin controls
+ * properly transform the data and/or any resulting props).
+ */
+describe('superset-plugin-chart-liquid', () => {
+  it('exists', () => {
+    expect(SupersetPluginChartLiquid).toBeDefined();
+  });
+});

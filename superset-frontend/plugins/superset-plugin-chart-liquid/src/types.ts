@@ -16,7 +16,29 @@
  * specific language governing permissions and limitations
  * under the License.
  */
-import './assets/stylesheets/superset.less';
+import {
+  QueryFormData,
+  supersetTheme,
+  TimeseriesDataRecord,
+} from '@superset-ui/core';
 
-/// Importing Antd under its own stylesheet to prevent unintentional theming.
-import './assets/stylesheets/antd/index.less';
+export interface SupersetPluginChartLiquidStylesProps {
+  height: number;
+  width: number;
+  headerFontSize: keyof typeof supersetTheme.typography.sizes;
+  boldText: boolean;
+}
+
+interface SupersetPluginChartLiquidCustomizeProps {
+  headerText: string;
+}
+
+export type SupersetPluginChartLiquidQueryFormData = QueryFormData &
+  SupersetPluginChartLiquidStylesProps &
+  SupersetPluginChartLiquidCustomizeProps;
+
+export type SupersetPluginChartLiquidProps = SupersetPluginChartLiquidStylesProps &
+  SupersetPluginChartLiquidCustomizeProps & {
+    data: TimeseriesDataRecord[];
+    // add typing here for the props you pass in from transformProps.ts!
+  };

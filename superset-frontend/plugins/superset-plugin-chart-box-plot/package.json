@@ -16,11 +16,17 @@
   "module": "esm/index.js",
   "main": "lib/index.js",
   "dependencies": {
-    "@mui/x-charts": "^7.23.2",
-    "ag-charts-enterprise": "^11.0.0",
-    "ag-charts-react": "^11.0.0",
-    "react": "^19.0.0",
-    "react-dom": "^19.0.0"
+    "@ant-design/plots": "^2.0.0",
+    "@mui/docs": "^6.1.8",
+    "@mui/x-charts": "^7.22.3",
+    "ag-charts-enterprise": "^10.3.3",
+    "ag-charts-react": "^10.3.3"
+  },
+  "peerDependencies": {
+    "@emotion/react": "11.13.5",
+    "@emotion/styled": "11.13.5",
+    "@superset-ui/chart-controls": "*",
+    "@superset-ui/core": "*"
   },
   "devDependencies": {
     "@types/react-dom": "^18.3.1"

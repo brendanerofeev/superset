@@ -16,7 +16,19 @@
  * specific language governing permissions and limitations
  * under the License.
  */
-import './assets/stylesheets/superset.less';
+import buildQuery from '../../src/plugin/buildQuery';
 
-/// Importing Antd under its own stylesheet to prevent unintentional theming.
-import './assets/stylesheets/antd/index.less';
+describe('SupersetPluginChartLiquid buildQuery', () => {
+  const formData = {
+    datasource: '5__table',
+    granularity_sqla: 'ds',
+    series: 'foo',
+    viz_type: 'my_chart',
+  };
+
+  it('should build groupby with series in form data', () => {
+    const queryContext = buildQuery(formData);
+    const [query] = queryContext.queries;
+    expect(query.columns).toEqual(['foo']);
+  });
+});

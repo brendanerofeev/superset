@@ -87,7 +87,7 @@ import { PivotTableChartPlugin as PivotTableChartPluginV2 } from '@superset-ui/p
 import { HandlebarsChartPlugin } from '@superset-ui/plugin-chart-handlebars';
 import { FilterPlugins } from 'src/constants';
 import TimeTableChartPlugin from '../TimeTable';
-import { SupersetPluginChartHelloWorld } from 'plugins/superset-plugin-chart-hello-world';
+import { SupersetPluginChartHelloWorld } from 'plugins/superset-plugin-chart-hello-world/src';
 
 
 export default class MainPreset extends Preset {
